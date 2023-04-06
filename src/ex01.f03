@@ -18,8 +18,10 @@ get_arguments: block
         ! n番目の引数の長さを取得
         call get_command_argument(number=n, length=length_nth_arg)
 
+        ! n番目の配列を割り当て
         allocate (character(length_nth_arg) :: arg(n)%v)
 
+        ! n番目の引数を取得
         call get_command_argument(number=n, value=arg(n)%v)
 
         print *, n, arg(n)%v
